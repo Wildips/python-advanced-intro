@@ -9,8 +9,7 @@ def get_data():
         users = {}
         data = json.load(data_file)
         for row in data:
-            users[row["id"]] = User(id=row["id"], email=row["email"], first_name=row["first_name"],
-                                    last_name=row["last_name"], avatar=row["avatar"])
+            users[row["id"]] = User(**row)
         support_data = Support(url=f"http://{HOST}/#support-heading",
                                text=f"Some text message from support")
         return users, support_data

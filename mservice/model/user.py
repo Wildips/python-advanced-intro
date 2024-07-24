@@ -1,5 +1,3 @@
-from typing import List
-
 from pydantic import BaseModel
 
 
@@ -18,13 +16,4 @@ class Support(BaseModel):
 
 class UserResponse(BaseModel):
     data: User
-    support: Support
-
-
-class UserListResponse(BaseModel):
-    page: int
-    per_page: int
-    total: int
-    total_pages: int
-    data: List[User]
     support: Support

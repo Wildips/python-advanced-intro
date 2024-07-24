@@ -3,7 +3,9 @@ import allure
 import pytest
 import requests
 
-BASE_API_URL = "http://127.0.0.1:8000/api/"
+from mservice.config import HOST, PORT
+
+BASE_API_URL = f"http://{HOST}:{PORT}/api/"
 
 
 @allure.title(f"Базовый URL API тестов : {BASE_API_URL}")

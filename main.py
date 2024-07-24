@@ -1,6 +1,6 @@
 import uvicorn
 
-from mservice.config import HOST
+from mservice.config import HOST, PORT
 from mservice.service import app
 
-uvicorn.run(app, host=HOST, port=8000)
+uvicorn.run(app, host=HOST, port=PORT)

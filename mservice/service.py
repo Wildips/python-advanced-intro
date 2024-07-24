@@ -13,4 +13,3 @@ async def get_user(user_id: int):
         return UserResponse(data=users[user_id], support=support_info)
     else:
         raise HTTPException(status_code=404, detail="User not found")
-
